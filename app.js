@@ -1,19 +1,12 @@
-'use strict';
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}
 
-const switcher = document.querySelector('.btn');
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
 
-switcher.addEventListener('click', function() {
-    // Alterna entre os temas
-    document.body.classList.toggle('dark-theme');
-
-    // Obtém a classe atual
-    var className = document.body.className;
-
-    if (className === "dark-theme") {
-        console.log('Current class name: ' + className);
-        this.textContent = "Preto"; 
-    } else {
-        console.log('Current class name: ' + className);
-        this.textContent = "Claro";
-    }
-});
+function showNext(currentModalId, nextModalId) {
+    closeModal(currentModalId);
+    openModal(nextModalId);
+}
