@@ -1,174 +1,46 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
 
-body {
-         font-family: 'Roboto', sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #1a1a1a;
-         color: #e0e0e0;
-         
 
-     }
-     nav {
-         display: flex;
-         justify-content: center;
-         background-color: #0d0d0d;
-         padding: 10px 0;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-     }
-     nav a {
-         color: #ffbb00;
-         text-decoration: none;
-         margin: 0 15px;
-         font-size: 1.2em;
-         padding: 10px 20px;
-         border: 2px solid transparent;
-         transition: all 0.3s ease;
-         border-radius: 5px;
-     }
-     nav a:hover {
-         background-color: #ffbb00;
-         color: #0d0d0d;
-         border: 2px solid #ffbb00;
-     }
-     .container {
-         max-width: 1200px;
-         margin: 20px auto;
-         padding: 0 20px;
-     }
-     .profile {
-         text-align: center;
-         margin-bottom: 40px;
-     }
-     .profile img {
-         border-radius: 50%;
-         width: 200px;
-         height: 200px;
-         transition: transform 0.3s;
-         border: 5px solid #ffbb00;
-     }
-     .profile img:hover {
-         transform: scale(1.1);
-     }
-     .profile h2 {
-         margin: 10px 0 5px;
-         font-size: 2em;
-         color: #ffbb00;
-     }
-     .profile p {
-         font-size: 1.2em;
-         color: #b3b3b3;
-     }
-     .projects {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-around;
-     }
-     .project {
-         background-color: #262626;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-         margin: 20px;
-         width: 300px;
-         overflow: hidden;
-         transition: transform 0.3s;
-     }
-     .project:hover {
-         transform: translateY(-10px);
-     }
-     .project img {
-         width: 100%;
-         height: 200px;
-         object-fit: cover;
-     }
-     .project h3 {
-         margin: 15px;
-         font-size: 1.5em;
-         color: #ffbb00;
-     }
-     .project p {
-         margin: 0 15px 15px;
-         color: #b3b3b3;
-     }
-     .specialties {
-         text-align: center;
-         margin: 40px 0;
-     }
-     .specialties h2 {
-         font-size: 2em;
-         margin-bottom: 20px;
-         color: #ffbb00;
-     }
-     .specialties .icons {
-         display: flex;
-         justify-content: center;
-         gap: 40px;
-     }
-     .specialties .icons div {
-         text-align: center;
-     }
-     .specialties .icons i {
-         font-size: 3em;
-     }
-     .specialties .icons i.fa-html5 {
-         color: #e34c26;
-     }
-     .specialties .icons i.fa-css3-alt {
-         color: #1572b6;
-     }
-     .specialties .icons i.fa-js {
-         color: #f7df1e;
-     }
-     .specialties .icons p {
-         margin-top: 10px;
-         font-size: 1.2em;
-         color: #b3b3b3;
-     }
-     footer {
-         background-color: #0d0d0d;
-         color: #e0e0e0;
-         text-align: center;
-         padding: 20px 0;
-         margin-top: 40px;
-         box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-     }
-     footer p {
-         margin: 0;
-     }
-     .contact {
-         text-align: center;
-         margin: 40px 0;
-     }
-     .contact h2 {
-         font-size: 2em;
-         margin-bottom: 20px;
-         color: #ffbb00;
-     }
-     .contact form {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-     }
-     .contact form input, .contact form textarea {
-         width: 80%;
-         max-width: 500px;
-         padding: 10px;
-         margin: 10px 0;
-         border: 2px solid #ffbb00;
-         border-radius: 5px;
-         background-color: #1a1a1a;
-         color: #e0e0e0;
-         font-size: 1em;
-     }
-     .contact form button {
-         padding: 10px 20px;
-         border: none;
-         border-radius: 5px;
-         background-color: #ffbb00;
-         color: #0d0d0d;
-         font-size: 1.2em;
-         cursor: pointer;
-         transition: background-color 0.3s ease;
-     }
-     .contact form button:hover {
-         background-color: #85ca05;
-     }
+
+.projeto{
+
+    color:rgb(2, 2, 2);
+
+}
+
+
+.title-projeto{
+
+    font-size:34px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(2, 2, 2);
+    font-variant: normal;
+    
+
+}
