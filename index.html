@@ -1,111 +1,194 @@
-<html>
- <head>
-  <title>
-   Portfólio
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="main.css">
- </head>
- <body>
-  <div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <nav class="flex justify-center space-x-4 py-4 bg-gray-800">
+        <a href="#about" class="text-white hover:text-blue-500">Sobre</a>
+        <a href="#projects" class="text-white hover:text-blue-500">Projetos</a>
+        <a href="#contact" class="text-white hover:text-blue-500">Contato</a>
+    </nav>
+    <div class="container mx-auto px-4">
+        <section class="profile text-center py-10" id="about">
+            <img src="https://raw.githubusercontent.com/lucaskhourybr/portfolio/refs/heads/main/img/rostolucas.PNG" alt="Foto de perfil de um desenvolvedor sorrindo, com fundo desfocado" class="mx-auto rounded-full" width="200" height="200">
+            <h2 class="text-3xl font-bold mt-4">Lucas Tadeu Khoury Ribeiro</h2>
+            <p class="mt-2">Engenheiro Elétrico e Iniciante em Desenvolvimento Web.</p>
+        </section>
+        <section class="projects py-10" id="projects">
+            <h2 class="text-3xl font-bold text-center mb-8">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/a1aa/image/wezPDYciRYVddyST9de1um8C4TdkBN8LS6lfiO0LC9Q7Oa1nA.jpg" alt="Imagem de um projeto de site com design moderno e responsivo" class="mb-4" width="300" height="200">
+                    <h3 class="text-2xl font-bold mb-2">Projeto 1</h3>
+                    <p class="mb-4">Descrição breve do projeto 1.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('modal1')">Mais Informações</button>
+                </div>
+                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/a1aa/image/YuooRS2pmK4mM5ShYMegKUOTQpJfeERso7uR6lgVjHt1Oa1nA.jpg" alt="Imagem de um aplicativo móvel com interface amigável" class="mb-4" width="300" height="200">
+                    <h3 class="text-2xl font-bold mb-2">Projeto 2</h3>
+                    <p class="mb-4">Descrição breve do projeto 2.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('modal2')">Mais Informações</button>
+                </div>
+                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/a1aa/image/VGJcQbR24Bq9EVXoV4o0qUhshLa52XKk77KZMDzeepneOa1nA.jpg" alt="Imagem de um dashboard de análise de dados" class="mb-4" width="300" height="200">
+                    <h3 class="text-2xl font-bold mb-2">Projeto 3</h3>
+                    <p class="mb-4">Descrição breve do projeto 3.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal('modal3')">Mais Informações</button>
+                </div>
+            </div>
+        </section>
+        <section class="specialties py-10" id="specialties">
+            <h2 class="text-3xl font-bold text-center mb-8">Especialidades</h2>
+            <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                    <i class="fab fa-html5 text-6xl" style="color: #e34c26;"></i>
+                    <p class="mt-2">HTML5</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-css3-alt text-6xl" style="color: #1572b6;"></i>
+                    <p class="mt-2">CSS3</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-js text-6xl" style="color: #f7df1e;"></i>
+                    <p class="mt-2">JavaScript</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact py-10" id="contact">
+            <h2 class="text-3xl font-bold text-center mb-8">Contato</h2>
+            <form class="max-w-lg mx-auto">
+                <input type="text" placeholder="Seu Nome" class="w-full p-2 mb-4 rounded bg-gray-800 text-white " >
+                <input type="email" placeholder="Seu Email" class="w-full p-2 mb-4 rounded bg-gray-800 text-white">
+                <textarea placeholder="Sua Mensagem" rows="5" class="w-full p-2 mb-4 rounded bg-gray-800 text-white"></textarea>
+                <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <footer class="text-center py-4 bg-gray-800">
+        <p>© 2023 Seu Nome. Todos os direitos reservados.</p>
+
   
-  <nav>
-   <a href="#about">
-    Sobre
-   </a>
-   <a href="#projects">
-    Projetos
-   </a>
-   <a href="#contact">
-    Contato
-   </a>
-  </nav>
-  <div class="container">
-   <section class="profile" id="about">
-    <img alt="Foto de perfil de um desenvolvedor sorrindo, com fundo desfocado" height="200" src="https://raw.githubusercontent.com/lucaskhourybr/portfolio/refs/heads/main/img/rostolucas.PNG" width="200"/>
-    <h2>
-     Lucas Tadeu Khoury Ribeiro
-    </h2>
-    <p>
-     Engenheiro Elétrico e Iniciante em Desenvolvilmento Web.
-    </p>
-   </section>
-   <section class="projects" id="projects">
-    <div class="project">
-     <img alt="Imagem de um projeto de site com design moderno e responsivo" height="200" src="https://storage.googleapis.com/a1aa/image/wezPDYciRYVddyST9de1um8C4TdkBN8LS6lfiO0LC9Q7Oa1nA.jpg" width="300"/>
-     <h3>
-      Projeto 1
-     </h3>
-     <p>
-      Descrição breve do projeto 1.
-     </p>
+
+
+
+    </footer>
+
+    
+    <script src="app.js"></script>
+
+    <!-- Modals -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/a1aa/image/DGEp7iZB2zJWHV6DHatFGqIkolqUp5g031VeRKigywIWWTAKA.jpg" alt="Imagem detalhada do Projeto 1 com um design futurista e inovador" width="400" height="300">
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <h2 class="title-projeto">Projeto 1</h2>
+                    <p class="projeto">Descrição detalhada do Projeto 1. Este projeto é inovador e utiliza tecnologias de ponta para alcançar resultados impressionantes.</p>
+                </div>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal1', 'modal1-2')"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
     </div>
-    <div class="project">
-     <img alt="Imagem de um aplicativo móvel com interface amigável" height="200" src="https://storage.googleapis.com/a1aa/image/YuooRS2pmK4mM5ShYMegKUOTQpJfeERso7uR6lgVjHt1Oa1nA.jpg" width="300"/>
-     <h3>
-      Projeto 2
-     </h3>
-     <p>
-      Descrição breve do projeto 2.
-     </p>
+    <div class="modal" id="modal1-2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1-2')">&times;</span>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/a1aa/image/NTyDSqDHEOInDdfakK8uJfu7qHJVh3xDGaCucLuy9yLvsmAUA.jpg" alt="Imagem adicional do Projeto 1 mostrando mais detalhes do design" width="400" height="300">
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <h2 class="title-projeto">Projeto 1</h2>
+                    <p class="projeto">Mais detalhes sobre o Projeto 1. Este projeto continua a impressionar com suas funcionalidades avançadas.</p>
+                </div>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal1-2', 'modal1')"><i class="fas fa-arrow-left"></i></button>
+            </div>
+        </div>
     </div>
-    <div class="project">
-     <img alt="Imagem de um dashboard de análise de dados" height="200" src="https://storage.googleapis.com/a1aa/image/VGJcQbR24Bq9EVXoV4o0qUhshLa52XKk77KZMDzeepneOa1nA.jpg" width="300"/>
-     <h3>
-      Projeto 3
-     </h3>
-     <p>
-      Descrição breve do projeto 3.
-     </p>
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/a1aa/image/P1jLadjLT37NL1eKJIfyWAfEykfIzURC11aAMEPNaU0OzaCQB.jpg" alt="Imagem detalhada do Projeto 2 com um design futurista e inovador" width="400" height="300">
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <h2 class="title-projeto">Projeto 2</h2>
+                    <p class="projeto">Descrição detalhada do Projeto 2. Este projeto é inovador e utiliza tecnologias de ponta para alcançar resultados impressionantes.</p>
+                </div>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal2', 'modal2-2')"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
     </div>
-   </section>
-   <section class="specialties" id="specialties">
-    <h2>
-     Especialidades
-    </h2>
-    <div class="icons">
-     <div>
-      <i class="fab fa-html5" style="color: #e34c26;">
-      </i>
-      <p>
-       HTML5
-      </p>
-     </div>
-     <div>
-      <i class="fab fa-css3-alt" style="color: #1572b6;">
-      </i>
-      <p>
-       CSS3
-      </p>
-     </div>
-     <div>
-      <i class="fab fa-js" style="color: #f7df1e;">
-      </i>
-      <p>
-       JavaScript
-      </p>
-     </div>
+    <div class="modal" id="modal2-2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2-2')">&times;</span>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/a1aa/image/ySqHLNG87YbnCxr91N748BxXSHQJlcVGmeC28oVZVE3WWTAKA.jpg" alt="Imagem adicional do Projeto 2 mostrando mais detalhes do design" width="400" height="300">
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <h2 class="title-projeto">Projeto 2</h2>
+                    <p class="projeto">Mais detalhes sobre o Projeto 2. Este projeto continua a impressionar com suas funcionalidades avançadas.</p>
+                </div>
+            </div>
+            <div class="flex justify-between mt-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal2-2', 'modal2')"><i class="fas fa-arrow-left"></i></button>
+            </div>
+        </div>
     </div>
-   </section>
-   <section class="contact" id="contact">
-    <h2>
-     Contato
-    </h2>
-    <form>
-     <input placeholder="Seu Nome" type="text"/>
-     <input placeholder="Seu Email" type="email"/>
-     <textarea placeholder="Sua Mensagem" rows="5"></textarea>
-     <button type="submit">
-      Enviar
-     </button>
-    </form>
-   </section>
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/2">
+                  <img src="https://storage.googleapis.com/a1aa/image/P1jLadjLT37NL1eKJIfyWAfEykfIzURC11aAMEPNaU0OzaCQB.jpg" alt="Imagem detalhada do Projeto 2 com um design futurista e inovador" width="400" height="300">
+              </div>
+              <div class="md:w-1/2 md:pl-4">
+                  <h2 class="title-projeto">Projeto 3</h2>
+                  <p class="projeto">Descrição detalhada do Projeto 2. Este projeto é inovador e utiliza tecnologias de ponta para alcançar resultados impressionantes.</p>
+              </div>
+          </div>
+          <div class="flex justify-between mt-4">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal3', 'modal3-3')"><i class="fas fa-arrow-right"></i></button>
+          </div>
+      </div>
   </div>
-  <footer>
-   <p>
-    © 2023 Seu Nome. Todos os direitos reservados.
-   </p>
-  </footer>
- </body>
+  <div class="modal" id="modal3-3">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3-3')">&times;</span>
+          <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/2">
+                  <img src="https://storage.googleapis.com/a1aa/image/ySqHLNG87YbnCxr91N748BxXSHQJlcVGmeC28oVZVE3WWTAKA.jpg" alt="Imagem adicional do Projeto 2 mostrando mais detalhes do design" width="400" height="300">
+              </div>
+              <div class="md:w-1/2 md:pl-4">
+                  <h2 class="title-projeto">Projeto 3</h2>
+                  <p class="projeto">Mais detalhes sobre o Projeto 2. Este projeto continua a impressionar com suas funcionalidades avançadas.</p>
+              </div>
+          </div>
+          <div class="flex justify-between mt-4">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="showNext('modal3-3', 'modal3')"><i class="fas fa-arrow-left"></i></button>
+          </div>
+      </div>
+  </div>
+
+    
+
+
+</body>
 </html>
